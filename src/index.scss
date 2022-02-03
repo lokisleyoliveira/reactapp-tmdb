@@ -13,3 +13,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+nav {
+  height: 56px;
+  width: auto;
+  background: #5c16c5;
+  display: flex;
+  align-items: center;
+  a {
+    fill: white;
+    svg {
+      display: inline-block;
+      height: 24px;
+      width: auto;
+    }
+  }
+}
+
+header {
+  height: auto;
+  width: auto;
+  background-color: #2d0c5e;
+  span {
+    color: white;
+    padding: 85px;
+    word-wrap: break-word;
+    text-align: center;
+    h1,
+    h6 {
+      font-weight: 700;
+    }
+  }
+}
