@@ -34,7 +34,7 @@ header {
   height: auto;
   width: auto;
   background-color: #2d0c5e;
-  div {
+  .headItems {
     color: white;
     padding: 85px;
     word-wrap: break-word;
@@ -42,6 +42,20 @@ header {
     h1,
     h6 {
       font-weight: 700;
+    }
+    .genreList {
+      margin-top: 50px;
+    }
+    .genreButton {
+      color: #323232;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      background: white;
+      font-size: 16px;
+      border-radius: 4px;
+      padding: 8px 16px;
+      margin: 4px;
     }
   }
 }
