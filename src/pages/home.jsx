@@ -1,10 +1,11 @@
-import { Nav, Header } from "../components/index";
+import { Nav, Header, Movies } from "../components/index";
 
 function Home() {
   return (
     <>
       <Nav />
       <Header />
+      <Movies />
     </>
   );
 }
