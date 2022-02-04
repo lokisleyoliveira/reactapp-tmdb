@@ -1,5 +1,4 @@
-import "../../index.scss";
-import { Container } from "react-bootstrap";
+import "../layout.scss";
 import { useEffect, useState } from "react";
 import MovieRepository from "../../core/repositories/movieRepository";
 import { GenreButton } from "../index";

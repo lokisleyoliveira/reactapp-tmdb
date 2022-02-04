@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Container } from "react-bootstrap";
 import { Logo } from "../../assets/index";
-import "../../index.scss";
+import "../layout.scss";
 
 function Nav() {
   return (
