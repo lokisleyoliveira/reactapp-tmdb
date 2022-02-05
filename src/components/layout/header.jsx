@@ -1,4 +1,5 @@
 import "../layout.scss";
+import React from "react";
 import { useEffect, useState } from "react";
 import MovieRepository from "../../core/repositories/movieRepository";
 import { GenreButton } from "../index";
