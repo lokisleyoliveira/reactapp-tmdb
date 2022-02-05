@@ -1,10 +1,10 @@
 import React from "react";
-import { Home } from "./pages/index";
+import MovieRoutes from "./movieRoutes";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <MovieRoutes />
     </div>
   );
 }
