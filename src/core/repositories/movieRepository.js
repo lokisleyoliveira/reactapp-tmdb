@@ -17,13 +17,22 @@ class MovieRepository {
     return process.env.REACT_APP_API_KEY;
   }
 
-  async popular(params) {
-    const response = await this.axios.get("/trending/all/day");
+  async popular() {
+    const response = await this.axios.get("/movie/popular");
     return response.data;
   }
 
-  async genre(params) {
+  async genre() {
     const response = await this.axios.get("/genre/movie/list");
+    return response.data;
+  }
+
+  async movie(params) {
+    const response = await this.axios.get(`/movie/${params}`, {
+      params: {
+        append_to_response: "release_dates,videos,credits,recommendations",
+      },
+    });
     return response.data;
   }
 }
