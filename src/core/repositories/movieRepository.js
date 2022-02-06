@@ -35,6 +35,17 @@ class MovieRepository {
     });
     return response.data;
   }
+
+  async discover(params) {
+    const response = await this.axios.get("/discover/movie", {
+      params: {
+        sort_by: "popularity.desc",
+        with_genres: `${params.join("|")}`,
+      },
+    });
+
+    return response.data;
+  }
 }
 
 export default new MovieRepository();

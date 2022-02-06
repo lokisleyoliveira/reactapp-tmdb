@@ -1,22 +1,22 @@
-import MovieRepository from "../../core/repositories/movieRepository";
+import FilterMoviesByGenre from "../../core/useCases/filterMoviesByGenre";
 import { formatDate } from "../../core/util/attributeParser";
 import React from "react";
 import { useState, useEffect } from "react";
 import { MovieCard } from "../index";
 import { Container, Row, Col } from "react-bootstrap";
 
-function Movies() {
+function Movies({ genres }) {
   const [movies, setmovies] = useState([]);
 
   useEffect(() => {
-    MovieRepository.popular()
+    FilterMoviesByGenre(genres)
       .then((data) => {
         setmovies(data.results);
       })
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  }, [genres]);
 
   return (
     <Container>

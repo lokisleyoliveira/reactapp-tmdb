@@ -37,7 +37,7 @@ header {
     .genreList {
       margin-top: 50px;
     }
-    .genreButton {
+    .genreButtonInactive {
       color: #323232;
       font-weight: bold;
       text-decoration: none;
@@ -47,6 +47,19 @@ header {
       border-radius: 4px;
       padding: 8px 16px;
       margin: 4px;
+      border-style: none;
+    }
+    .genreButtonActive {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      background: #d18000;
+      font-size: 16px;
+      border-radius: 4px;
+      padding: 8px 16px;
+      margin: 4px;
+      border-style: none;
     }
   }
 }

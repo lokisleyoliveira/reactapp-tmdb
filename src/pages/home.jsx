@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Nav, Header, Movies } from "../components/index";
 
 function Home() {
+  const [genres, setGenres] = useState([]);
+
   return (
     <>
       <Nav />
-      <Header />
-      <Movies />
+      <Header filter={genres} setFilter={setGenres} />
+      <Movies filter={genres} />
     </>
   );
 }
