@@ -68,3 +68,22 @@ header {
     text-transform: uppercase;
   }
 }
+.progressBar {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  .progressBox {
+    display: inline-flex;
+    min-width: 60px;
+    min-height: 60px;
+    letter-spacing: -0.005em;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 38px;
+  }
+  .progressText {
+    margin-left: 12px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
