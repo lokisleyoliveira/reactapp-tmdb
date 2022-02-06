@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import MovieRepository from "../../core/repositories/movieRepository";
 import { GenreButton } from "../index";
 
-function Header() {
+function Header({ filter, setfilter }) {
   const [genres, setGenres] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,14 @@ function Header() {
         <div className="genreList">
           <h6>FILTRE POR:</h6>
           {genres.map((item) => {
-            return <GenreButton name={item.name} key={item.id} />;
+            return (
+              <GenreButton
+                name={item.name}
+                key={item.id}
+                filter={filter}
+                setfilter={setfilter}
+              />
+            );
           })}
         </div>
       </div>
