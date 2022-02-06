@@ -23,7 +23,7 @@ function Movies() {
       <Row xs={2} md={4} lg={5}>
         {movies.map((item) => {
           return (
-            <Col>
+            <Col key={item.id}>
               <MovieCard
                 title={item.title || item.name}
                 release={formatDate(item.release_date)}
