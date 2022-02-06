@@ -1,24 +1,11 @@
+import moment from "moment";
+
 function formatDate(date) {
-  const month = [
-    "jan",
-    "fev",
-    "mar",
-    "abr",
-    "mai",
-    "jun",
-    "jul",
-    "ago",
-    "set",
-    "out",
-    "nov",
-    "dez",
-  ];
+  return moment(date).format("DD MMM YYYY");
+}
 
-  const newDate = new Date(date);
 
-  return `${newDate.getDay()} ${
-    month[newDate.getMonth()]
-  } ${newDate.getFullYear()}`;
+
 }
 
 export { formatDate };
