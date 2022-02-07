@@ -4,9 +4,17 @@ function GenreButton({ name, id, filter, setFilter }) {
   const [active, setactive] = useState(false);
 
   const applyFilter = () => {
-    if (filter.find((filterId) => filterId === id))
-      setFilter(filter.filter((filterId) => filterId !== id));
-    else setFilter((filter) => [...filter, id]);
+    const finalFilter = [];
+    let addId = true;
+    for (const filterId of filter) {
+      if (filterId === id) {
+        addId = false;
+      } else {
+        finalFilter.push(filterId);
+      }
+    }
+    if (addId) finalFilter.push(id);
+    setFilter(finalFilter);
   };
 
   return (

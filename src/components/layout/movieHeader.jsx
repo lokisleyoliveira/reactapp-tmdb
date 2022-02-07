@@ -28,7 +28,7 @@ function MovieHeader(props) {
             <span className="crew">
               {props.crew.map((item) => {
                 return (
-                  <span className="crewMember">
+                  <span className="crewMember" key={item.credit_id}>
                     <span className="name">{item.name}</span>
                     <span className="job">{item.job}</span>
                   </span>
