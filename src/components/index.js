@@ -8,6 +8,7 @@ import GenreButton from "./layout/genreButton";
 import UserVotes from "./layout/userVotes";
 import CastCard from "./layout/castCard";
 import Trailer from "./layout/trailer";
+import Recommendations from "./layout/recommendations";
 
 export { Nav };
 export { Header };
@@ -19,3 +20,4 @@ export { Movies };
 export { UserVotes };
 export { CastCard };
 export { Trailer };
+export { Recommendations };

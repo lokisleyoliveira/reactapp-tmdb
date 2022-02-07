@@ -5,6 +5,7 @@ import {
   MovieHeader,
   MovieCast,
   Trailer,
+  Recommendations,
 } from "../components/index";
 import { useState, useEffect, useMemo } from "react";
 import { Container } from "react-bootstrap";
@@ -71,6 +72,9 @@ function MovieDetails() {
           <Container>
             <MovieCast cast={info.credits.cast} style={{ width: "100%" }} />
             {hasVideo && <Trailer video={info.videos.results[0]} />}
+            <Recommendations
+              movies={info.recommendations.results.slice(0, 6)}
+            />
           </Container>
         </>
       )}
