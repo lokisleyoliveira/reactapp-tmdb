@@ -1,8 +1,12 @@
 import MovieRepository from "../core/repositories/movieRepository";
 import { useParams } from "react-router-dom";
 import { Nav } from "../components/index";
-import { MovieHeader } from "../components/index";
+import {
+  MovieHeader,
+  MovieCast,
+} from "../components/index";
 import { useState, useEffect, useMemo } from "react";
+import { Container } from "react-bootstrap";
 import moment from "moment";
 import {
   getCertificationRelease,
@@ -44,24 +48,29 @@ function MovieDetails() {
   const crew = getCrew(info?.credits?.crew ?? []);
 
   return (
-    <>
+    <div style={{ background: "#f3f3f3" }}>
       <Nav />
       {!!info && (
-        <MovieHeader
-          poster={info.poster_path}
-          title={info.title}
-          year={moment(info.release_date).format("YYYY")}
-          certification={certification}
-          release={moment(release).format("L")}
-          location={location}
-          genres={genres.join(", ")}
-          duration={runtimeToString(info.runtime)}
-          voteAverage={info.vote_average}
-          overview={info.overview}
-          crew={crew}
-        />
+        <>
+          <MovieHeader
+            poster={info.poster_path}
+            title={info.title}
+            year={moment(info.release_date).format("YYYY")}
+            certification={certification}
+            release={moment(release).format("L")}
+            location={location}
+            genres={genres.join(", ")}
+            duration={runtimeToString(info.runtime)}
+            voteAverage={info.vote_average}
+            overview={info.overview}
+            crew={crew}
+          />
+          <Container>
+            <MovieCast cast={info.credits.cast} style={{ width: "100%" }} />
+          </Container>
+        </>
       )}
-    </>
+    </div>
   );
 }
 

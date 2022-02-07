@@ -1,5 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
 
+h3 {
+  font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  letter-spacing: -0.005em;
+  line-height: 32px;
+  color: #131313;
+}
+
 nav {
   height: 56px;
   width: auto;
@@ -161,5 +170,46 @@ header {
     margin-left: 12px;
     font-size: 16px;
     line-height: 20px;
+  }
+}
+
+.movieCast {
+  margin-top: 40px;
+}
+.castPanel {
+  display: block ruby;
+  overflow-x: auto;
+  margin-left: -10px;
+}
+
+.castCard {
+  width: 190px;
+  height: 335px;
+  border-radius: 4px;
+  padding: 8px;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 8px;
+  margin-bottom: 20px;
+  img {
+    display: block;
+    border-radius: 4px;
+    max-height: 220px;
+    object-fit: cover;
+  }
+  .castName {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #131313;
+    padding-top: 16px;
+  }
+  .castChar {
+    font-size: 16px;
+    line-height: 24px;
+    color: #131313;
   }
 }
