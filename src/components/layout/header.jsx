@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import MovieRepository from "../../core/repositories/movieRepository";
 import { GenreButton } from "../index";
 
-function Header({ filter, setfilter }) {
+function Header({ filter, setFilter }) {
   const [genres, setGenres] = useState([]);
 
   useEffect(() => {
@@ -27,9 +27,10 @@ function Header({ filter, setfilter }) {
             return (
               <GenreButton
                 name={item.name}
+                id={item.id}
                 key={item.id}
                 filter={filter}
-                setfilter={setfilter}
+                setFilter={setFilter}
               />
             );
           })}

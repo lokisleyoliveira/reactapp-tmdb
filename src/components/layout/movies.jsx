@@ -5,18 +5,18 @@ import { useState, useEffect } from "react";
 import { MovieCard } from "../index";
 import { Container, Row, Col } from "react-bootstrap";
 
-function Movies({ genres }) {
+function Movies({ filter }) {
   const [movies, setmovies] = useState([]);
 
   useEffect(() => {
-    FilterMoviesByGenre(genres)
+    FilterMoviesByGenre(filter)
       .then((data) => {
         setmovies(data.results);
       })
       .catch((err) => {
         console.error(err);
       });
-  }, [genres]);
+  }, [filter]);
 
   return (
     <Container>
