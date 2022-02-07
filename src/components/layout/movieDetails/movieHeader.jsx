@@ -1,5 +1,5 @@
-import "../layout.scss";
-import { UserVotes } from "../index";
+import "./movieHeader.scss";
+import { UserVotes } from "../../index";
 import { Container, Col, Row, Image } from "react-bootstrap";
 
 function MovieHeader(props) {

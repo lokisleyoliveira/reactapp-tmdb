@@ -1,4 +1,4 @@
-import "../layout.scss";
+import "./header.scss";
 import React from "react";
 import { useEffect, useState } from "react";
 import MovieRepository from "../../core/repositories/movieRepository";

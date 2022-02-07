@@ -1,6 +1,6 @@
 import { Row, Col } from "react-bootstrap";
-import { MovieCard } from "../index";
-import { formatDate } from "../../core/util/attributeParser";
+import { MovieCard } from "../../index";
+import { formatDate } from "../../../core/util/attributeParser";
 
 function Recommendations({ movies }) {
   return (

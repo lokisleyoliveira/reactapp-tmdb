@@ -1,0 +1,45 @@
+@import "~bootstrap/scss/bootstrap";
+
+header {
+  height: auto;
+  width: auto;
+  background-color: #2d0c5e;
+  margin-bottom: 20px;
+  .headItems {
+    color: white;
+    padding: 85px;
+    word-wrap: break-word;
+    text-align: center;
+    h1,
+    h6 {
+      font-weight: 700;
+    }
+    .genreList {
+      margin-top: 50px;
+    }
+    .genreButtonInactive {
+      color: #323232;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      background: white;
+      font-size: 16px;
+      border-radius: 4px;
+      padding: 8px 16px;
+      margin: 4px;
+      border-style: none;
+    }
+    .genreButtonActive {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      background: #d18000;
+      font-size: 16px;
+      border-radius: 4px;
+      padding: 8px 16px;
+      margin: 4px;
+      border-style: none;
+    }
+  }
+}

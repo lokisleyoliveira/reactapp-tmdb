@@ -1,5 +1,5 @@
-import { CastCard } from "../index";
-import "../layout.scss";
+import { CastCard } from "../../index";
+import "./cast.scss";
 
 function MovieCast({ cast }) {
   return (

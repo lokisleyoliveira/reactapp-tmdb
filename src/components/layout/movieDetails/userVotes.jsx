@@ -1,6 +1,6 @@
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import "../layout.scss";
+import "./userVotes.scss";
 
 function UserVotes(props) {
   const votes = props.voteAverage;

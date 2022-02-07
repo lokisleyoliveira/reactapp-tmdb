@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/bootstrap";
+
+.progressBar {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  .progressBox {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    letter-spacing: -0.005em;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 38px;
+  }
+  .progressText {
+    margin-left: 12px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

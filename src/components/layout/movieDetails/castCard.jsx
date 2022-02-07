@@ -1,5 +1,4 @@
 import { Image } from "react-bootstrap";
-import "../layout.scss";
 
 function CastCard({ pic, name, char }) {
   return (
