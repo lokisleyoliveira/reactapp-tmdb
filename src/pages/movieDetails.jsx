@@ -4,6 +4,7 @@ import { Nav } from "../components/index";
 import {
   MovieHeader,
   MovieCast,
+  Trailer,
 } from "../components/index";
 import { useState, useEffect, useMemo } from "react";
 import { Container } from "react-bootstrap";
@@ -47,6 +48,8 @@ function MovieDetails() {
 
   const crew = getCrew(info?.credits?.crew ?? []);
 
+  const hasVideo = (info?.videos?.results?.length ?? 0) !== 0;
+
   return (
     <div style={{ background: "#f3f3f3" }}>
       <Nav />
@@ -67,6 +70,7 @@ function MovieDetails() {
           />
           <Container>
             <MovieCast cast={info.credits.cast} style={{ width: "100%" }} />
+            {hasVideo && <Trailer video={info.videos.results[0]} />}
           </Container>
         </>
       )}

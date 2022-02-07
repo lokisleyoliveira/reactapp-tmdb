@@ -7,6 +7,7 @@ import MovieCast from "./layout/movieCast";
 import GenreButton from "./layout/genreButton";
 import UserVotes from "./layout/userVotes";
 import CastCard from "./layout/castCard";
+import Trailer from "./layout/trailer";
 
 export { Nav };
 export { Header };
@@ -17,3 +18,4 @@ export { MovieCast };
 export { Movies };
 export { UserVotes };
 export { CastCard };
+export { Trailer };
