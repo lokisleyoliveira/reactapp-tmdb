@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Nav, Header, Movies } from "../components/index";
+import "./home.scss";
 
 function Home() {
   const [genres, setGenres] = useState([]);
