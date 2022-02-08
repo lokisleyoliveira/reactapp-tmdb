@@ -1,17 +1,42 @@
 @import "~bootstrap/scss/bootstrap";
 
-nav {
+.nav {
   height: 56px;
   width: auto;
   background: #5c16c5;
   display: flex;
   align-items: center;
-  a {
-    fill: white;
-    svg {
-      display: inline-block;
-      height: 24px;
-      width: auto;
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+    .content {
+      display: flex;
+      flex-wrap: inherit;
+      align-items: center;
+      a {
+        fill: white;
+        svg {
+          height: 20px;
+          width: auto;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    justify-content: space-between;
+    .content {
+      display: flex;
+      flex-wrap: inherit;
+      align-items: center;
+      padding-left: 10vw;
+      a {
+        fill: white;
+        svg {
+          height: 24px;
+          width: auto;
+          display: inline-block;
+        }
+      }
     }
   }
 }

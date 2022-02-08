@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/bootstrap";
+
+iframe {
+  @include media-breakpoint-down(md) {
+    width: 90vw;
+    height: 50vw;
+  }
+  @include media-breakpoint-up(md) {
+    width: 60vw;
+    height: 33vw;
+  }
+}

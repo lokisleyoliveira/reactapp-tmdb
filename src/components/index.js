@@ -1,4 +1,4 @@
-import Nav from "./layout/nav";
+import NavTMDB from "./layout/nav";
 import Header from "./layout/header";
 import Movies from "./layout/movies";
 import MovieCard from "./layout/movieCard";
@@ -10,7 +10,7 @@ import UserVotes from "./layout/movieDetails/userVotes";
 import MovieHeader from "./layout/movieDetails/movieHeader";
 import Recommendations from "./layout/movieDetails/recommendations";
 
-export { Nav };
+export { NavTMDB as Nav };
 export { Header };
 export { GenreButton };
 export { MovieHeader };

@@ -1,10 +1,10 @@
+import "./trailer.scss";
+
 function Trailer({ video }) {
   return (
     <>
       <h3 className="videoTitle">{video.type}</h3>
       <iframe
-        width="910px"
-        height="510px"
         src={`https://www.youtube.com/embed/${video.key}`}
         title={video.name}
         frameBorder="0"

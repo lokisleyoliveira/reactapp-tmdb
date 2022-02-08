@@ -20,9 +20,9 @@ function Header({ filter, setFilter }) {
   return (
     <header>
       <div className="headItems">
-        <h1>Milhões de filmes, séries e pessoas para descobrir. Explore já.</h1>
+        <p>Milhões de filmes, séries e pessoas para descobrir. Explore já.</p>
         <div className="genreList">
-          <h6>FILTRE POR:</h6>
+          <p>FILTRE POR:</p>
           {genres.map((item) => {
             return (
               <GenreButton

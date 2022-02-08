@@ -1,45 +1,93 @@
 @import "~bootstrap/scss/bootstrap";
 
+@mixin buttonGeneric {
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  margin: 6px;
+  border-style: none;
+}
+
+@mixin buttonDesktop {
+  @include buttonGeneric;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+}
+
+@mixin buttonMobile {
+  @include buttonGeneric;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 16px;
+}
+
 header {
   height: auto;
   width: auto;
   background-color: #2d0c5e;
   margin-bottom: 20px;
-  .headItems {
-    color: white;
-    padding: 85px;
-    word-wrap: break-word;
-    text-align: center;
-    h1,
-    h6 {
-      font-weight: 700;
-    }
-    .genreList {
-      margin-top: 50px;
-    }
-    .genreButtonInactive {
-      color: #323232;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      background: white;
-      font-size: 16px;
-      border-radius: 4px;
-      padding: 8px 16px;
-      margin: 4px;
-      border-style: none;
-    }
-    .genreButtonActive {
+  @include media-breakpoint-down(md) {
+    .headItems {
       color: white;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      background: #d18000;
-      font-size: 16px;
-      border-radius: 4px;
-      padding: 8px 16px;
-      margin: 4px;
-      border-style: none;
+      padding: 16px;
+      word-wrap: break-word;
+      text-align: left;
+      p {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+      }
+      .genreList {
+        margin-top: 50px;
+        p {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 20px;
+        }
+      }
+      .genreButtonInactive {
+        @include buttonMobile();
+        color: #323232;
+        background: white;
+      }
+      .genreButtonActive {
+        @include buttonMobile();
+        color: white;
+        background: #d18000;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .headItems {
+      color: white;
+      padding: 10vh 10vw;
+      word-wrap: break-word;
+      text-align: center;
+      p {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+      }
+      .genreList {
+        margin-top: 50px;
+        p {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 20px;
+        }
+      }
+      .genreButtonInactive {
+        @include buttonDesktop;
+        color: #323232;
+        background: white;
+      }
+      .genreButtonActive {
+        @include buttonDesktop;
+        color: white;
+        background: #d18000;
+      }
     }
   }
 }
