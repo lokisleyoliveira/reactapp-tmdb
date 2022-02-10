@@ -1,8 +1,12 @@
 import MovieRepository from "../repositories/movieRepository";
 
-async function FilterMoviesByGenre(filter) {
-  if (filter.length === 0) return await MovieRepository.popular();
-  return await MovieRepository.discover(filter);
+async function FilterMoviesByGenre(payload) {
+  if (payload.filter.length === 0) {
+    console.log(payload);
+    return await MovieRepository.popular(payload);
+  }
+  console.log(payload);
+  return await MovieRepository.discover(payload);
 }
 
 export default FilterMoviesByGenre;

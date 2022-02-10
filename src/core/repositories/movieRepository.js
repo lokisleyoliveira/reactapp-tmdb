@@ -17,8 +17,12 @@ class MovieRepository {
     return process.env.REACT_APP_API_KEY;
   }
 
-  async popular() {
-    const response = await this.axios.get("/movie/popular");
+  async popular(params) {
+    const response = await this.axios.get("/movie/popular", {
+      params: {
+        page: params.page,
+      },
+    });
     return response.data;
   }
 
@@ -40,7 +44,8 @@ class MovieRepository {
     const response = await this.axios.get("/discover/movie", {
       params: {
         sort_by: "popularity.desc",
-        with_genres: `${params.join("|")}`,
+        page: params.page,
+        with_genres: `${params.filter.join("|")}`,
       },
     });
 
