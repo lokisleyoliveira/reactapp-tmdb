@@ -1,21 +1,12 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { actionFilter } from "../../features/filter";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
-function GenreButton({ name, id, filter, setFilter }) {
+function GenreButton({ name, id }) {
+  const dispatch = useDispatch();
   const [active, setactive] = useState(false);
-
-  const applyFilter = () => {
-    const finalFilter = [];
-    let addId = true;
-    for (const filterId of filter) {
-      if (filterId === id) {
-        addId = false;
-      } else {
-        finalFilter.push(filterId);
-      }
-    }
-    if (addId) finalFilter.push(id);
-    setFilter(finalFilter);
-  };
 
   return (
     <>
@@ -23,8 +14,7 @@ function GenreButton({ name, id, filter, setFilter }) {
         className={active ? "genreButtonActive" : "genreButtonInactive"}
         onClick={() => {
           setactive((prevState) => !prevState);
-          applyFilter();
-          setTimeout(console.log(filter), 1000);
+          dispatch(actionFilter({ id }));
         }}
       >
         {name}
