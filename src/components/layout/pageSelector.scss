@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/bootstrap";
+
+.selector {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  justify-content: center;
+
+  button {
+    border-style: none;
+    background: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+  }
+}
+
+.otherPage {
+  color: #5c16c5;
+}
+
+.currentPage {
+  color: #131313;
+}

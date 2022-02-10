@@ -3,7 +3,7 @@ import { formatDate } from "../../core/util/attributeParser";
 import React from "react";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { MovieCard } from "../index";
+import { MovieCard, PageSelector } from "../index";
 import { Container, Row, Col } from "react-bootstrap";
 
 const MAX_PAGE = 500;
@@ -45,6 +45,7 @@ function Movies() {
           );
         })}
       </Row>
+      <PageSelector lastPage={lastPage} />
     </Container>
   );
 }
