@@ -18,6 +18,10 @@ function GenreButton({ name, id }) {
         }}
       >
         {name}
+        <FontAwesomeIcon
+          icon={faCircleXmark}
+          className={active ? "iconXActive" : "iconXInactive"}
+        />
       </button>
     </>
   );

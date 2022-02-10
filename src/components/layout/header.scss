@@ -7,6 +7,16 @@
   border-radius: 4px;
   margin: 6px;
   border-style: none;
+  .iconXActive {
+    margin-left: 8px;
+    color: white;
+    display: inline-block;
+  }
+  .iconXInactive {
+    margin-left: 8px;
+    color: white;
+    display: none;
+  }
 }
 
 @mixin buttonDesktop {
